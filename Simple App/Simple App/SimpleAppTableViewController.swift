@@ -9,7 +9,7 @@
 import UIKit
 
 class SimpleAppTableViewController: UITableViewController {
-        
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -91,5 +91,5 @@ class SimpleAppTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
+
 }

@@ -7,25 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		841C8C481CF2D7DF00F8FB87 /* SimpleAppDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C8C471CF2D7DF00F8FB87 /* SimpleAppDetailTableViewCell.swift */; };
 		844C51D21CF29DC700996504 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844C51D11CF29DC700996504 /* AppDelegate.swift */; };
 		844C51D91CF29DC700996504 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844C51D81CF29DC700996504 /* Assets.xcassets */; };
 		844C51E51CF29F6300996504 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844C51E41CF29F6300996504 /* Launch Screen.storyboard */; };
-		844C51E81CF2A35600996504 /* SimpleAppTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844C51E61CF2A35600996504 /* SimpleAppTableViewController.swift */; };
-		844C51E91CF2A35600996504 /* SimpleAppTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844C51E71CF2A35600996504 /* SimpleAppTableViewController.xib */; };
-		844C51EC1CF2A39F00996504 /* SimpleAppDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844C51EA1CF2A39F00996504 /* SimpleAppDetailViewController.swift */; };
-		844C51ED1CF2A39F00996504 /* SimpleAppDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844C51EB1CF2A39F00996504 /* SimpleAppDetailViewController.xib */; };
+		844C51FD1CF2CD3700996504 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844C51FC1CF2CD3700996504 /* Main.storyboard */; };
+		844C51FF1CF2CD7900996504 /* SimpleAppTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844C51FE1CF2CD7900996504 /* SimpleAppTableViewController.swift */; };
+		844C52011CF2CDD200996504 /* SimpleAppDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844C52001CF2CDD200996504 /* SimpleAppDetailViewController.swift */; };
+		844C52031CF2CDFA00996504 /* SimpleAppTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844C52021CF2CDFA00996504 /* SimpleAppTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		841C8C471CF2D7DF00F8FB87 /* SimpleAppDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleAppDetailTableViewCell.swift; sourceTree = "<group>"; };
 		844C51CE1CF29DC700996504 /* Simple App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		844C51D11CF29DC700996504 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		844C51D81CF29DC700996504 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		844C51DD1CF29DC800996504 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		844C51E41CF29F6300996504 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		844C51E61CF2A35600996504 /* SimpleAppTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleAppTableViewController.swift; sourceTree = "<group>"; };
-		844C51E71CF2A35600996504 /* SimpleAppTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleAppTableViewController.xib; sourceTree = "<group>"; };
-		844C51EA1CF2A39F00996504 /* SimpleAppDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleAppDetailViewController.swift; sourceTree = "<group>"; };
-		844C51EB1CF2A39F00996504 /* SimpleAppDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleAppDetailViewController.xib; sourceTree = "<group>"; };
+		844C51FC1CF2CD3700996504 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		844C51FE1CF2CD7900996504 /* SimpleAppTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleAppTableViewController.swift; sourceTree = "<group>"; };
+		844C52001CF2CDD200996504 /* SimpleAppDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleAppDetailViewController.swift; sourceTree = "<group>"; };
+		844C52021CF2CDFA00996504 /* SimpleAppTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleAppTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +60,11 @@
 		844C51D01CF29DC700996504 /* Simple App */ = {
 			isa = PBXGroup;
 			children = (
-				844C51E61CF2A35600996504 /* SimpleAppTableViewController.swift */,
-				844C51E71CF2A35600996504 /* SimpleAppTableViewController.xib */,
-				844C51EA1CF2A39F00996504 /* SimpleAppDetailViewController.swift */,
-				844C51EB1CF2A39F00996504 /* SimpleAppDetailViewController.xib */,
+				844C51FE1CF2CD7900996504 /* SimpleAppTableViewController.swift */,
+				844C52021CF2CDFA00996504 /* SimpleAppTableViewCell.swift */,
+				844C52001CF2CDD200996504 /* SimpleAppDetailViewController.swift */,
+				841C8C471CF2D7DF00F8FB87 /* SimpleAppDetailTableViewCell.swift */,
+				844C51FC1CF2CD3700996504 /* Main.storyboard */,
 				844C51E31CF29E8800996504 /* Supported Files */,
 			);
 			path = "Simple App";
@@ -136,10 +139,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				844C51FD1CF2CD3700996504 /* Main.storyboard in Resources */,
 				844C51D91CF29DC700996504 /* Assets.xcassets in Resources */,
-				844C51ED1CF2A39F00996504 /* SimpleAppDetailViewController.xib in Resources */,
 				844C51E51CF29F6300996504 /* Launch Screen.storyboard in Resources */,
-				844C51E91CF2A35600996504 /* SimpleAppTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,9 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841C8C481CF2D7DF00F8FB87 /* SimpleAppDetailTableViewCell.swift in Sources */,
 				844C51D21CF29DC700996504 /* AppDelegate.swift in Sources */,
-				844C51E81CF2A35600996504 /* SimpleAppTableViewController.swift in Sources */,
-				844C51EC1CF2A39F00996504 /* SimpleAppDetailViewController.swift in Sources */,
+				844C52031CF2CDFA00996504 /* SimpleAppTableViewCell.swift in Sources */,
+				844C51FF1CF2CD7900996504 /* SimpleAppTableViewController.swift in Sources */,
+				844C52011CF2CDD200996504 /* SimpleAppDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

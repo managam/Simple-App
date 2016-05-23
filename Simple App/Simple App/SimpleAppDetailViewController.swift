@@ -8,7 +8,10 @@
 
 import UIKit
 
-class SimpleAppDetailViewController: UIViewController {
+class SimpleAppDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var imageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +22,34 @@ class SimpleAppDetailViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! SimpleAppDetailTableViewCell
+        
+        // configure the cell
+        switch indexPath.row {
+        case 0:
+            cell.fieldLabel.text = "Caption"
+            cell.valueLabel.text = "Caption"
+        case 1:
+            cell.fieldLabel.text = "Description"
+            cell.valueLabel.text = "Caption"
+        default:
+            cell.fieldLabel.text = ""
+            cell.valueLabel.text = ""
+        }
+        
+        cell.backgroundColor = UIColor.clearColor()
+        
+        return cell
+        
     }
     
 
