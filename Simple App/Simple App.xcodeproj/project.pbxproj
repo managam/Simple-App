@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		844C51D21CF29DC700996504 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844C51D11CF29DC700996504 /* AppDelegate.swift */; };
-		844C51D41CF29DC700996504 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844C51D31CF29DC700996504 /* ViewController.swift */; };
-		844C51D71CF29DC700996504 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844C51D51CF29DC700996504 /* Main.storyboard */; };
 		844C51D91CF29DC700996504 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844C51D81CF29DC700996504 /* Assets.xcassets */; };
 		844C51E51CF29F6300996504 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844C51E41CF29F6300996504 /* Launch Screen.storyboard */; };
+		844C51E81CF2A35600996504 /* SimpleAppTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844C51E61CF2A35600996504 /* SimpleAppTableViewController.swift */; };
+		844C51E91CF2A35600996504 /* SimpleAppTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844C51E71CF2A35600996504 /* SimpleAppTableViewController.xib */; };
+		844C51EC1CF2A39F00996504 /* SimpleAppDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844C51EA1CF2A39F00996504 /* SimpleAppDetailViewController.swift */; };
+		844C51ED1CF2A39F00996504 /* SimpleAppDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844C51EB1CF2A39F00996504 /* SimpleAppDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		844C51CE1CF29DC700996504 /* Simple App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		844C51D11CF29DC700996504 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		844C51D31CF29DC700996504 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		844C51D61CF29DC700996504 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		844C51D81CF29DC700996504 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		844C51DD1CF29DC800996504 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		844C51E41CF29F6300996504 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		844C51E61CF2A35600996504 /* SimpleAppTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleAppTableViewController.swift; sourceTree = "<group>"; };
+		844C51E71CF2A35600996504 /* SimpleAppTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleAppTableViewController.xib; sourceTree = "<group>"; };
+		844C51EA1CF2A39F00996504 /* SimpleAppDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleAppDetailViewController.swift; sourceTree = "<group>"; };
+		844C51EB1CF2A39F00996504 /* SimpleAppDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleAppDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +58,10 @@
 		844C51D01CF29DC700996504 /* Simple App */ = {
 			isa = PBXGroup;
 			children = (
-				844C51D31CF29DC700996504 /* ViewController.swift */,
-				844C51D51CF29DC700996504 /* Main.storyboard */,
+				844C51E61CF2A35600996504 /* SimpleAppTableViewController.swift */,
+				844C51E71CF2A35600996504 /* SimpleAppTableViewController.xib */,
+				844C51EA1CF2A39F00996504 /* SimpleAppDetailViewController.swift */,
+				844C51EB1CF2A39F00996504 /* SimpleAppDetailViewController.xib */,
 				844C51E31CF29E8800996504 /* Supported Files */,
 			);
 			path = "Simple App";
@@ -131,8 +137,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				844C51D91CF29DC700996504 /* Assets.xcassets in Resources */,
+				844C51ED1CF2A39F00996504 /* SimpleAppDetailViewController.xib in Resources */,
 				844C51E51CF29F6300996504 /* Launch Screen.storyboard in Resources */,
-				844C51D71CF29DC700996504 /* Main.storyboard in Resources */,
+				844C51E91CF2A35600996504 /* SimpleAppTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,23 +150,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				844C51D41CF29DC700996504 /* ViewController.swift in Sources */,
 				844C51D21CF29DC700996504 /* AppDelegate.swift in Sources */,
+				844C51E81CF2A35600996504 /* SimpleAppTableViewController.swift in Sources */,
+				844C51EC1CF2A39F00996504 /* SimpleAppDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		844C51D51CF29DC700996504 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				844C51D61CF29DC700996504 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		844C51DE1CF29DC800996504 /* Debug */ = {
@@ -288,6 +285,7 @@
 				844C51E21CF29DC800996504 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
