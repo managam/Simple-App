@@ -11,7 +11,7 @@
 		844C51D41CF29DC700996504 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844C51D31CF29DC700996504 /* ViewController.swift */; };
 		844C51D71CF29DC700996504 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844C51D51CF29DC700996504 /* Main.storyboard */; };
 		844C51D91CF29DC700996504 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844C51D81CF29DC700996504 /* Assets.xcassets */; };
-		844C51DC1CF29DC800996504 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844C51DA1CF29DC800996504 /* LaunchScreen.storyboard */; };
+		844C51E51CF29F6300996504 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844C51E41CF29F6300996504 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,8 +20,8 @@
 		844C51D31CF29DC700996504 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		844C51D61CF29DC700996504 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		844C51D81CF29DC700996504 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		844C51DB1CF29DC800996504 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		844C51DD1CF29DC800996504 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		844C51E41CF29F6300996504 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +54,22 @@
 		844C51D01CF29DC700996504 /* Simple App */ = {
 			isa = PBXGroup;
 			children = (
-				844C51D11CF29DC700996504 /* AppDelegate.swift */,
 				844C51D31CF29DC700996504 /* ViewController.swift */,
 				844C51D51CF29DC700996504 /* Main.storyboard */,
-				844C51D81CF29DC700996504 /* Assets.xcassets */,
-				844C51DA1CF29DC800996504 /* LaunchScreen.storyboard */,
-				844C51DD1CF29DC800996504 /* Info.plist */,
+				844C51E31CF29E8800996504 /* Supported Files */,
 			);
 			path = "Simple App";
+			sourceTree = "<group>";
+		};
+		844C51E31CF29E8800996504 /* Supported Files */ = {
+			isa = PBXGroup;
+			children = (
+				844C51D11CF29DC700996504 /* AppDelegate.swift */,
+				844C51D81CF29DC700996504 /* Assets.xcassets */,
+				844C51DD1CF29DC800996504 /* Info.plist */,
+				844C51E41CF29F6300996504 /* Launch Screen.storyboard */,
+			);
+			name = "Supported Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,8 +130,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				844C51DC1CF29DC800996504 /* LaunchScreen.storyboard in Resources */,
 				844C51D91CF29DC700996504 /* Assets.xcassets in Resources */,
+				844C51E51CF29F6300996504 /* Launch Screen.storyboard in Resources */,
 				844C51D71CF29DC700996504 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,14 +157,6 @@
 				844C51D61CF29DC700996504 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		844C51DA1CF29DC800996504 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				844C51DB1CF29DC800996504 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -253,7 +253,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Simple App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.morra.Simple-App";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.managam.Simple-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -264,7 +264,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Simple App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.morra.Simple-App";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.managam.Simple-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
