@@ -10,8 +10,9 @@ import UIKit
 
 class SimpleAppTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var caption: UILabel!
     @IBOutlet weak var thumbnailImageView: UIImageView!
-    @IBOutlet weak var captionImageView: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

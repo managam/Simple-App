@@ -9,6 +9,10 @@
 import UIKit
 
 class SimpleAppTableViewController: UITableViewController {
+    
+    var simpleDatas = [Simple]()
+    @IBOutlet var spinner: UIActivityIndicatorView!
+    var imageCache: NSCache = NSCache()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +22,35 @@ class SimpleAppTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        // Get Simple data
+        self.getSimpleData()
+        
+        // Loading
+        self.spinner.hidesWhenStopped = true
+        self.spinner.center = view.center
+        view.addSubview(self.spinner)
+        spinner.startAnimating()
+    }
+    
+    // MARK: Get simple data and append to table view
+    func getSimpleData() {
+        // Remove existing data before
+        self.simpleDatas.removeAll()
+        self.tableView.reloadData()
+        
+        RestApiManager.sharedInstance.getRandomData { (json) in
+            if let results = json.array {
+                for entry in results {
+                    //print(entry["image_url"])
+                    self.simpleDatas.append(Simple(json: entry))
+                }
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.tableView.reloadData()
+                    self.spinner.stopAnimating()
+                })
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,23 +62,57 @@ class SimpleAppTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return simpleDatas.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! SimpleAppTableViewCell
 
         // Configure the cell...
+        let simpleData = self.simpleDatas[indexPath.row]
+        
+        // For image caption
+        cell.caption.textColor = UIColor.blackColor()
+        cell.caption.shadowColor = UIColor.whiteColor()
+        cell.caption.text = simpleData.caption
+        
+        // For default thumbnail image
+        cell.thumbnailImageView.contentMode = UIViewContentMode.ScaleAspectFit
+        cell.thumbnailImageView.image = UIImage(named: "photoalbum")
+        
+        // Check if the image is stored in cache
+        if let imageURL = imageCache.objectForKey(simpleData.id) as? NSURL {
+            
+            // Get image from cache
+            print("Get image from cache")
+            cell.thumbnailImageView.contentMode = UIViewContentMode.ScaleAspectFill
+            cell.thumbnailImageView.image = UIImage(data: NSData(contentsOfURL: imageURL)!)
+            
+        } else {
+            dispatch_async(dispatch_get_main_queue(), {
+                if let url = NSURL(string: simpleData.imageURL) {
+                    if let data = NSData(contentsOfURL: url) {
+                        
+                        cell.caption.textColor = UIColor.whiteColor()
+                        cell.caption.shadowColor = UIColor.clearColor()
+                        
+                        cell.thumbnailImageView.contentMode = UIViewContentMode.ScaleAspectFill
+                        cell.thumbnailImageView.image = UIImage(data: data)
+                    }
+                }
+            })
+            
+        }
 
         return cell
     }
-    */
+ 
 
     /*
     // Override to support conditional editing of the table view.

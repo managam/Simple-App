@@ -35,7 +35,7 @@ class RestApiManager: NSObject {
         
             if let jsonData = data {
                 let json: JSON = JSON(data: jsonData)
-                onCompletion(json, error!)
+                onCompletion(json, error)
             } else {
                 onCompletion(nil, error!)
             }

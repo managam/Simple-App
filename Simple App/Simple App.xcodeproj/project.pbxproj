@@ -9,11 +9,10 @@
 /* Begin PBXBuildFile section */
 		4CC5F1A23030EFA4CC0BCC91 /* Pods_Simple_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8394CFFED1F77779E64A72B /* Pods_Simple_App.framework */; };
 		841C8C481CF2D7DF00F8FB87 /* SimpleAppDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C8C471CF2D7DF00F8FB87 /* SimpleAppDetailTableViewCell.swift */; };
-		841C8C581CF3121100F8FB87 /* Simple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C8C571CF3121100F8FB87 /* Simple.swift */; };
 		841C8C5B1CF3129200F8FB87 /* Simple.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 841C8C591CF3129200F8FB87 /* Simple.xcdatamodeld */; };
 		841E23481CF3F604000375C5 /* RestApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841E23471CF3F604000375C5 /* RestApiManager.swift */; };
 		841E234D1CF3F6F2000375C5 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841E234C1CF3F6F2000375C5 /* SwiftyJSON.framework */; };
-		841E23521CF3FCB9000375C5 /* DataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841E23511CF3FCB9000375C5 /* DataObject.swift */; };
+		841E23521CF3FCB9000375C5 /* Simple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841E23511CF3FCB9000375C5 /* Simple.swift */; };
 		844C51D21CF29DC700996504 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844C51D11CF29DC700996504 /* AppDelegate.swift */; };
 		844C51D91CF29DC700996504 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844C51D81CF29DC700996504 /* Assets.xcassets */; };
 		844C51E51CF29F6300996504 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844C51E41CF29F6300996504 /* Launch Screen.storyboard */; };
@@ -26,11 +25,10 @@
 /* Begin PBXFileReference section */
 		2ADC4DDBB155091946602FB9 /* Pods-Simple App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simple App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Simple App/Pods-Simple App.release.xcconfig"; sourceTree = "<group>"; };
 		841C8C471CF2D7DF00F8FB87 /* SimpleAppDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleAppDetailTableViewCell.swift; sourceTree = "<group>"; };
-		841C8C571CF3121100F8FB87 /* Simple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Simple.swift; sourceTree = "<group>"; };
 		841C8C5A1CF3129200F8FB87 /* Simple.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Simple.xcdatamodel; sourceTree = "<group>"; };
 		841E23471CF3F604000375C5 /* RestApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestApiManager.swift; sourceTree = "<group>"; };
 		841E234C1CF3F6F2000375C5 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../../../../../../Library/Developer/Xcode/DerivedData/Simple_App-dwcdxwqsgnamvpgrboduhiceuhyl/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
-		841E23511CF3FCB9000375C5 /* DataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataObject.swift; sourceTree = "<group>"; };
+		841E23511CF3FCB9000375C5 /* Simple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Simple.swift; sourceTree = "<group>"; };
 		844C51CE1CF29DC700996504 /* Simple App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		844C51D11CF29DC700996504 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		844C51D81CF29DC700996504 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,7 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				841E23471CF3F604000375C5 /* RestApiManager.swift */,
-				841E23511CF3FCB9000375C5 /* DataObject.swift */,
+				841E23511CF3FCB9000375C5 /* Simple.swift */,
 			);
 			name = "REST API";
 			sourceTree = "<group>";
@@ -100,14 +98,6 @@
 				841C8C471CF2D7DF00F8FB87 /* SimpleAppDetailTableViewCell.swift */,
 			);
 			name = "Simple App Detail";
-			sourceTree = "<group>";
-		};
-		841E23501CF3FCAD000375C5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				841C8C571CF3121100F8FB87 /* Simple.swift */,
-			);
-			name = Model;
 			sourceTree = "<group>";
 		};
 		844C51C51CF29DC700996504 = {
@@ -132,7 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				841E23461CF3F5DC000375C5 /* REST API */,
-				841E23501CF3FCAD000375C5 /* Model */,
 				841E234A1CF3F61D000375C5 /* Simple App Table */,
 				841E234B1CF3F63A000375C5 /* Simple App Detail */,
 				844C51FC1CF2CD3700996504 /* Main.storyboard */,
@@ -279,11 +268,10 @@
 				841C8C5B1CF3129200F8FB87 /* Simple.xcdatamodeld in Sources */,
 				841E23481CF3F604000375C5 /* RestApiManager.swift in Sources */,
 				844C51D21CF29DC700996504 /* AppDelegate.swift in Sources */,
-				841E23521CF3FCB9000375C5 /* DataObject.swift in Sources */,
+				841E23521CF3FCB9000375C5 /* Simple.swift in Sources */,
 				844C52031CF2CDFA00996504 /* SimpleAppTableViewCell.swift in Sources */,
 				844C51FF1CF2CD7900996504 /* SimpleAppTableViewController.swift in Sources */,
 				844C52011CF2CDD200996504 /* SimpleAppDetailViewController.swift in Sources */,
-				841C8C581CF3121100F8FB87 /* Simple.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

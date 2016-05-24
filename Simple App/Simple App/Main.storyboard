@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="7iE-cc-tVN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="R9V-gL-ptb">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Simple App Table View Controller-->
+        <!--Simple Datas-->
         <scene sceneID="y2V-Mt-MYq">
             <objects>
                 <tableViewController id="7iE-cc-tVN" customClass="SimpleAppTableViewController" customModule="Simple_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Sas-og-cZr">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" id="Sas-og-cZr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -23,20 +22,32 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="149"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DLr-99-jON">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DLr-99-jON">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Caption" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qo1-N8-RbN">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caption" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qo1-N8-RbN">
                                             <rect key="frame" x="8" y="8" width="304" height="27"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="27" id="ygc-WD-eYn"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="qo1-N8-RbN" firstAttribute="leading" secondItem="mUl-6u-FZI" secondAttribute="leadingMargin" id="BET-Yw-5J2"/>
+                                        <constraint firstItem="DLr-99-jON" firstAttribute="top" secondItem="mUl-6u-FZI" secondAttribute="top" id="FHh-Mw-uLU"/>
+                                        <constraint firstItem="qo1-N8-RbN" firstAttribute="top" secondItem="mUl-6u-FZI" secondAttribute="topMargin" id="MXe-lz-Z6w"/>
+                                        <constraint firstAttribute="trailing" secondItem="DLr-99-jON" secondAttribute="trailing" id="S1q-nt-9Wu"/>
+                                        <constraint firstItem="DLr-99-jON" firstAttribute="centerY" secondItem="mUl-6u-FZI" secondAttribute="centerY" id="Yw4-Md-P9S"/>
+                                        <constraint firstItem="DLr-99-jON" firstAttribute="centerX" secondItem="qo1-N8-RbN" secondAttribute="centerX" id="hTp-VC-QKU"/>
+                                        <constraint firstItem="DLr-99-jON" firstAttribute="leading" secondItem="mUl-6u-FZI" secondAttribute="leading" id="nTA-cq-NmJ"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="captionImageView" destination="qo1-N8-RbN" id="Ofl-OQ-mi5"/>
-                                    <outlet property="thumbnailImageView" destination="DLr-99-jON" id="IOH-CO-BAe"/>
+                                    <outlet property="caption" destination="qo1-N8-RbN" id="jXb-AZ-HYw"/>
+                                    <outlet property="thumbnailImageView" destination="DLr-99-jON" id="id9-Sb-pud"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -45,8 +56,15 @@
                             <outlet property="delegate" destination="7iE-cc-tVN" id="2E9-b4-jzz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="1iK-bG-Ms4"/>
+                    <navigationItem key="navigationItem" title="Simple Datas" id="1iK-bG-Ms4"/>
+                    <connections>
+                        <outlet property="spinner" destination="L0x-DM-wPm" id="YAN-1J-6ke"/>
+                    </connections>
                 </tableViewController>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="L0x-DM-wPm">
+                    <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </activityIndicatorView>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nrJ-yB-22w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="716" y="339"/>
