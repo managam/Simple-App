@@ -9,14 +9,36 @@
 import UIKit
 
 class SimpleAppDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
+    var simpleData: Simple!
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var caption: UILabel!
+    @IBOutlet weak var desc: UILabel!
+    @IBOutlet var spinner: UIActivityIndicatorView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        // Get image
+        self.getImage()
+        
+        // Loading
+        self.spinner.hidesWhenStopped = true
+        self.spinner.center = view.center
+        view.addSubview(self.spinner)
+        spinner.startAnimating()
+        
+        // Caption as title
+        self.title = self.simpleData.caption
+        
+        // Custom table view
+        tableView.estimatedRowHeight = 36.0
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,6 +50,17 @@ class SimpleAppDetailViewController: UIViewController, UITableViewDataSource, UI
         return 2
     }
     
+    // MARK: Get image
+    func getImage() {
+        dispatch_async(dispatch_get_main_queue(), {
+            if let url = NSURL(string: self.simpleData!.imageURL) {
+                if let data = NSData(contentsOfURL: url) {
+                    self.imageView.image = UIImage(data: data)
+                    self.spinner.stopAnimating()
+                }
+            }
+        })
+    }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
@@ -37,10 +70,10 @@ class SimpleAppDetailViewController: UIViewController, UITableViewDataSource, UI
         switch indexPath.row {
         case 0:
             cell.fieldLabel.text = "Caption"
-            cell.valueLabel.text = "Caption"
+            cell.valueLabel.text = self.simpleData.caption
         case 1:
             cell.fieldLabel.text = "Description"
-            cell.valueLabel.text = "Caption"
+            cell.valueLabel.text = self.simpleData.description
         default:
             cell.fieldLabel.text = ""
             cell.valueLabel.text = ""

@@ -24,7 +24,7 @@ class SimpleAppTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         // Get Simple data
-        self.getSimpleData()
+        self.getSimpleDatas()
         
         // Loading
         self.spinner.hidesWhenStopped = true
@@ -34,11 +34,7 @@ class SimpleAppTableViewController: UITableViewController {
     }
     
     // MARK: Get simple data and append to table view
-    func getSimpleData() {
-        // Remove existing data before
-        self.simpleDatas.removeAll()
-        self.tableView.reloadData()
-        
+    func getSimpleDatas() {        
         RestApiManager.sharedInstance.getRandomData { (json) in
             if let results = json.array {
                 for entry in results {
@@ -109,7 +105,10 @@ class SimpleAppTableViewController: UITableViewController {
             })
             
         }
-
+        
+        // Hide right arrow
+        cell.accessoryType = .None
+        
         return cell
     }
  
@@ -149,14 +148,24 @@ class SimpleAppTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if let indexPath = tableView.indexPathForSelectedRow {
+            let destinationController = segue.destinationViewController as! SimpleAppDetailViewController
+            destinationController.simpleData = self.simpleDatas[indexPath.row]
+        }
+        
     }
-    */
+    
+    @IBAction func unwindToHomeScreen(segue: UIStoryboardSegue) {
+        
+    }
+    
 
 }
