@@ -100,6 +100,14 @@
 			name = "Simple App Detail";
 			sourceTree = "<group>";
 		};
+		841E23531CF44460000375C5 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				844C51FC1CF2CD3700996504 /* Main.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
 		844C51C51CF29DC700996504 = {
 			isa = PBXGroup;
 			children = (
@@ -124,7 +132,7 @@
 				841E23461CF3F5DC000375C5 /* REST API */,
 				841E234A1CF3F61D000375C5 /* Simple App Table */,
 				841E234B1CF3F63A000375C5 /* Simple App Detail */,
-				844C51FC1CF2CD3700996504 /* Main.storyboard */,
+				841E23531CF44460000375C5 /* Storyboard */,
 				844C51E31CF29E8800996504 /* Supported Files */,
 				841C8C591CF3129200F8FB87 /* Simple.xcdatamodeld */,
 			);

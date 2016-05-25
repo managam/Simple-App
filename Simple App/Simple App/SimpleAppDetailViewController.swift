@@ -46,10 +46,6 @@ class SimpleAppDetailViewController: UIViewController, UITableViewDataSource, UI
         // Dispose of any resources that can be recreated.
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
-    }
-    
     // MARK: Get image
     func getImage() {
         dispatch_async(dispatch_get_main_queue(), {
@@ -60,6 +56,11 @@ class SimpleAppDetailViewController: UIViewController, UITableViewDataSource, UI
                 }
             }
         })
+    }
+    
+    // MARK: - Table view data source
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
